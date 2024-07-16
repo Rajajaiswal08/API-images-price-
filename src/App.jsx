@@ -1,30 +1,18 @@
-import Person from "./Person";
-import Products from "./beta/Product"
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./Page/Home";
 
 function App() {
-  // const [count, setCount] = useState(0)
-  const display = Products.map(
-    (Prod) => {
-     return <Person img={Prod.thumbnail} name={Prod.title} rating={Prod.rating}/>
-
-     
-    }
-  );
-  console.log(display);
-
-  return(
-    <div className='container-md'>
-              <div className="row border " >
-                 {
-                   display
-                 }
-               
-               </div>
-    
-    </div>
-  
-
+  const routes = createBrowserRouter(
+    [
+      {
+        path:"/",
+        element:<Home/>
+      }
+    ]
   )
+   return(
+     <RouterProvider router={routes}/>
+   )
 }
-
 export default App;

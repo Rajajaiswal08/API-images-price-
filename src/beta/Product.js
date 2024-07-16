@@ -1796,4 +1796,4 @@ const Products=[
     "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Kiwi/thumbnail.png"
   }
 ]
-export default Products
+export default Products;
